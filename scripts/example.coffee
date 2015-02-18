@@ -49,6 +49,9 @@ module.exports = (robot) ->
     msg.send msg.random lulz
   robot.hear /boloss/i, (msg) ->
     msg.send "Grave, boloss"
+
+  robot.hear /cookie/i, (msg) ->
+    msg.send "@everyone, praise the lord of cookies"
   #
   # robot.topic (msg) ->
   #   msg.send "#{msg.message.text}? That's a Paddlin'"
