@@ -21,7 +21,7 @@ module.exports = (robot) ->
     msg.reply "Love you too, dude. <3"
 
   robot.hear /admin/i, (msg)->
-    msg.reply "@madjid fasciste de merde" 
+    msg.send "@madjid fasciste de merde" 
 
   # robot.respond /open the (.*) doors/i, (msg) ->
   #   doorType = msg.match[1]
