@@ -26,11 +26,11 @@ module.exports = (robot) ->
   robot.hear /ping/, (msg) ->
     setTimeout () ->
       msg.send "pong"
-      , 60 * 1000
+    , 60 * 1000
   robot.hear /pong/, (msg) ->
     setTimeout () ->
       msg.send "ping"
-      , 60 * 1000
+    , 60 * 1000
 
 
   # robot.respond /open the (.*) doors/i, (msg) ->
