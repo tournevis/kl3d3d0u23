@@ -13,9 +13,9 @@ module.exports = (robot) ->
   # robot.hear /badger/i, (msg) ->
   #   msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
-
-  robot.respond /pd/, (msg)->
-    msg.reply "Stfu Stupid Human !"
+  tg = ['Stfu Stupid Human !', 'Dumb Ass', 'Go fuck yourself in your fat fucking ass']
+  robot.respond /pd/i, (msg)->
+    msg.reply msg.random tg 
   # robot.respond /open the (.*) doors/i, (msg) ->
   #   doorType = msg.match[1]
   #   if doorType is "pod bay"
