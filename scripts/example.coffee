@@ -47,7 +47,7 @@ module.exports = (robot) ->
   #
   robot.respond /lol/i, (msg) ->
     msg.send msg.random lulz
-  robot.respond /boloss/i, (msg) ->
+  robot.hear /boloss/i, (msg) ->
     msg.send "Grave, boloss"
   #
   # robot.topic (msg) ->
