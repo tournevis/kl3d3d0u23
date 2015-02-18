@@ -23,6 +23,16 @@ module.exports = (robot) ->
   robot.hear /admin/i, (msg)->
     msg.send "@madjid fasciste de merde" 
 
+  robot.hear /ping/, (msg) ->
+    setTimeout () ->
+      msg.send "pong"
+      , 60 * 1000
+  robot.hear /pong/, (msg) ->
+    setTimeout () ->
+      msg.send "ping"
+      , 60 * 1000
+
+
   # robot.respond /open the (.*) doors/i, (msg) ->
   #   doorType = msg.match[1]
   #   if doorType is "pod bay"
