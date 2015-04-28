@@ -33,6 +33,9 @@ module.exports = (robot) ->
   robot.hear /pidi/i, (msg)->
     msg.send msg.random pidi
 
+  robot.hear /coucou madjid/i, (msg)->
+    msg.send "@madjid coucou" 
+
 
   robot.hear /ping/, (msg) ->
     setTimeout () ->
