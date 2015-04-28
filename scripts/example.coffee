@@ -26,6 +26,14 @@ module.exports = (robot) ->
   robot.hear /mort/i, (msg)->
     msg.send "I\'m back from the dead MORTHERFUCKERS" 
 
+  robot.hear /nazi/i, (msg)->
+    msg.send "Les nazis ça me fait tapper des barres de rire"
+
+  pidi = ["Bande de fragiles, regarder ce que c\'est un vrai bot" , "Les pidi moi je les aimes bien", "Go fuck yourself in your fat fucking ass", "Moi je vais me prendre une soupe"]
+  robot.hear /pidi/i, (msg)->
+    msg.send msg.random pidi
+
+
   robot.hear /ping/, (msg) ->
     setTimeout () ->
       msg.send "pong"
