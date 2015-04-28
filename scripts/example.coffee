@@ -35,6 +35,8 @@ module.exports = (robot) ->
 
   robot.hear /coucou madjid/i, (msg)->
     msg.send "@madjid coucou" 
+  robot.respond  /Es ce que tu le savent/i, (msg)->
+    msg.reply "Biensur que je le savent !" 
 
 
   robot.hear /ping/, (msg) ->
