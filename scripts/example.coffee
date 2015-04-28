@@ -23,6 +23,9 @@ module.exports = (robot) ->
   robot.hear /admin/i, (msg)->
     msg.send "@madjid fasciste de merde" 
 
+  robot.hear /mort/i, (msg)->
+    msg.send "I\'m back from the dead MORTHERFUCKERS" 
+
   robot.hear /ping/, (msg) ->
     setTimeout () ->
       msg.send "pong"
