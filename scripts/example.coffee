@@ -54,7 +54,7 @@ module.exports = (robot) ->
     if doorType is "pod bay"
       msg.reply "I'm afraid I can't let you do that."
     else
-      msg.reply "Opening{doorType} doors"
+      msg.reply "Opening " + doorType +" doors"
  
   # robot.hear /I like pie/i, (msg) ->
   #   msg.emote "makes a freshly baked pie"
