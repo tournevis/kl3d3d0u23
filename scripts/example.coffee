@@ -54,7 +54,7 @@ module.exports = (robot) ->
     if doorType is "pod bay"
       msg.reply "I'm afraid I can't let you do that."
     else
-      msg.reply "Opening " + doorType +" doors"
+      msg.reply "Opening#{doorType} doors"
  
   # robot.hear /I like pie/i, (msg) ->
   #   msg.emote "makes a freshly baked pie"
@@ -68,18 +68,21 @@ module.exports = (robot) ->
 
   robot.hear /cookie/i, (msg) ->
     msg.send "@everyone, praise the lord of cookies"
+
+  robot.hear /i don't understand/, (msg) ->
+    msg.reply "Neither do i"
   #
   # robot.topic (msg) ->
   #   msg.send "#{msg.message.text}? That's a Paddlin'"
   #
   #
-  # enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
-  # leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
+   enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
+   leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
   #
-  # robot.enter (msg) ->
-  #   msg.send msg.random enterReplies
-  # robot.leave (msg) ->
-  #   msg.send msg.random leaveReplies
+   robot.enter (msg) ->
+     msg.send msg.random enterReplies
+   robot.leave (msg) ->
+     msg.send msg.random leaveReplies
   #
   # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
   #
