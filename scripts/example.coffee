@@ -18,7 +18,8 @@ module.exports = (robot) ->
     msg.reply msg.random tg 
 
   robot.hear /How dare you/i, (msg)->
-    if msg.message.user.name.toLowerCase() is "princessdedouze"
+    sender = msg.message.user.name.toLowerCase()
+    if sender is "princessdedouze"
       msg.replay "sorry dude. Really i'm sorry"
     else
       msg.reply "stfu stupid human"
