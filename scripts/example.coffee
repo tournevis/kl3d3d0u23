@@ -17,6 +17,12 @@ module.exports = (robot) ->
   robot.hear /pd/i, (msg)->
     msg.reply msg.random tg 
 
+  robot.hear /How dare you/i, (msg)->
+    if msg.message.user.name.toLowerCase() is "princessdedouze"
+      msg.replay "sorry dude. Really i'm sorry"
+    else
+      msg.reply "stfu stupid human"
+
   robot.respond /i love you/i, (msg)->
     msg.reply "Love you too, dude. <3"
 
@@ -72,8 +78,8 @@ module.exports = (robot) ->
   robot.hear /i don't understand/, (msg) ->
     msg.reply "Neither do i"
   #
-  # robot.topic (msg) ->
-  #   msg.send "#{msg.message.text}? That's a Paddlin'"
+  robot.topic (msg) ->
+    msg.send "#{msg.message.text}? That's a Paddlin'"
   #
   #
    enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
