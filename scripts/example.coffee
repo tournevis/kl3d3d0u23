@@ -19,8 +19,8 @@ module.exports = (robot) ->
 
   robot.hear /How dare you/i, (msg)->
     sender = msg.message.user.name.toLowerCase()
-    if sender == "princessdedouze"
-      msg.replay "sorry dude. Really i'm sorry"
+    if sender is "princessdedouze"
+      msg.reply "sorry dude. Really i'm sorry"
     else
       msg.reply "stfu stupid human"
 
