@@ -37,7 +37,7 @@ module.exports = (robot) ->
   robot.hear /feuille/i, (msg)->
     msg.send msg.random feuille
 
-  bric= ['Brick de feuille ? ', 'Brick de rick', 'Brique de la galère' ,'Brique  et briquette sont dans un bateau', 'Christine and the brique' , ' Taylor Brick' , 'Kenbrick lamar' , 'Serge de l\'informaBrique' , 'Je push sur brickhub' , 'Brickera bien qui brickera le dernier ', 'fils de brique']
+  bric= ['Brick de feuille ? ', 'Brick de rick', 'Brique de la galère' ,'Brique  et briquette sont dans un bateau', 'Christine and the brique' , ' Taylor Brick' , 'Kenbrick lamar' , 'Serge de l\'informaBrique' , 'Je push sur brickhub' , 'Brickera bien qui brickera le dernier ', 'fils de brique','Brick Pitt','Daniel Radbrick']
   robot.hear /brick/i, (msg)->
     msg.send msg.random bric
 
