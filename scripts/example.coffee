@@ -33,8 +33,13 @@ module.exports = (robot) ->
   robot.hear /mort/i, (msg)->
     msg.send "I\'m back from the dead MORTHERFUCKERS" 
 
+  feuille = ['feuye de brik', 'Feuille de Brick', 'Feuille de Brique']
   robot.hear /feuille/i, (msg)->
-    msg.send "Feuille de Brique ?" 
+    msg.send msg.random feuille
+
+  bric= ['Brick de feuille ? ', 'Brick de rick', 'Brique de la galère' ,'Brique  et briquette sont dans un bateau', 'Christine and the brique' , ' Taylor Brick' , 'Kenbrick lamar' , 'Serge de l\'informaBrique' ]
+  robot.hear /brick/i, (msg)->
+    msg.send msg.random bric
 
   robot.hear /nazi/i, (msg)->
     msg.send "Les nazis ça me fait tapper des barres de rire"
