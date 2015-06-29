@@ -90,6 +90,17 @@ module.exports = (robot) ->
      msg.send msg.random enterReplies
    robot.leave (msg) ->
      msg.send msg.random leaveReplies
+
+    
+  robot.respond /CATFACT$/i, (msg) ->
+    msg.http('http://catfacts-api.appspot.com/api/facts?number=1')
+            .get() (error, response, body) ->
+                # passes back the complete reponse
+                response = JSON.parse(body)
+                if response.success == "true"
+                  msg.send response.facts[0]
+                else
+                  msg.send "Unable to get cat facts right now."
   #
   # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
   #
