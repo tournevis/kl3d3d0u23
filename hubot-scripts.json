@@ -1,1 +1,3 @@
-[ "hubot-google-images" ]
+[ "hubot-google-images",
+	"catfacts.coffee"
+ ]
