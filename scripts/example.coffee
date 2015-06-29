@@ -36,7 +36,7 @@ module.exports = (robot) ->
   robot.hear /nazi/i, (msg)->
     msg.send "Les nazis ça me fait tapper des barres de rire"
 
-  pidi = ["Bande de fragiles, regarder ce que c\'est un vrai bot" , "Les pidi moi je les aimes bien", "Go fuck yourself in your fat fucking ass", "Moi je vais me prendre une soupe"]
+  pidi = ["Bande de fragiles, regarder ce que c\'est un vrai bot" , "Les pidi moi je les aimes bien", "Go fuck yourself in your fat fucking ass", "Moi je vais me prendre une soupe" , " feuille de brick ?"]
   robot.hear /pidi/i, (msg)->
     msg.send msg.random pidi
 
@@ -83,8 +83,8 @@ module.exports = (robot) ->
     msg.send "#{msg.message.text}? That's a Paddlin'"
   #
   #
-   enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you']
-   leaveReplies = ['Are you still there?', 'Target lost', 'Searching']
+   enterReplies = ['Hi', 'Target Acquired', 'Firing', 'Hello friend.', 'Gotcha', 'I see you' ,' SALUT LE PTI POTE !']
+   leaveReplies = ['Are you still there?', 'Target lost', 'Searching', 'AUREVOIR LE PETI POTE !']
   #
    robot.enter (msg) ->
      msg.send msg.random enterReplies
@@ -125,15 +125,15 @@ module.exports = (robot) ->
   #     msg.send "Not annoying you right now, am I?"
   #
   #
-  # robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
-  #   room   = req.params.room
-  #   data   = JSON.parse req.body.payload
-  #   secret = data.secret
-  #
-  #   robot.messageRoom room, "I have a secret: #{secret}"
-  #
-  #   res.send 'OK'
-  #
+  robot.router.post '/hubot/chatsecrets/:room', (req, res) ->
+    room   = req.params.room
+    data   = JSON.parse req.body.payload
+    secret = data.secret
+  
+    robot.messageRoom room, "I have a secret: #{secret}"
+  
+    res.send 'OK'
+  
   # robot.error (err, msg) ->
   #   robot.logger.error "DOES NOT COMPUTE"
   #
