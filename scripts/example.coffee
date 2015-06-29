@@ -33,6 +33,9 @@ module.exports = (robot) ->
   robot.hear /mort/i, (msg)->
     msg.send "I\'m back from the dead MORTHERFUCKERS" 
 
+  robot.hear /feuille/i, (msg)->
+    msg.send "Feuille de Brique ?" 
+
   robot.hear /nazi/i, (msg)->
     msg.send "Les nazis ça me fait tapper des barres de rire"
 
@@ -91,7 +94,7 @@ module.exports = (robot) ->
    robot.leave (msg) ->
      msg.send msg.random leaveReplies
 
-    
+
   robot.respond /CATFACT$/i, (msg) ->
     msg.http('http://catfacts-api.appspot.com/api/facts?number=1')
             .get() (error, response, body) ->
