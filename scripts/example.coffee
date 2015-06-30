@@ -30,6 +30,9 @@ module.exports = (robot) ->
   robot.hear /admin/i, (msg)->
     msg.send "@madjid fasciste de merde" 
 
+  robot.hear /merci jojo$/i, (msg)->
+    msg.send "Merci jojo" 
+
   robot.hear /mort/i, (msg)->
     msg.send "I\'m back from the dead MORTHERFUCKERS" 
 
