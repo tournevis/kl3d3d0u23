@@ -112,6 +112,10 @@ module.exports = (robot) ->
                   msg.send response.facts[0]
                 else
                   msg.send "Unable to get cat facts right now."
+
+  robot.hear /trigger/i, (msg) ->
+    imageMe 'animate trigger', 'trigger', true, (url) ->
+      msg.send url
   #
   # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
   #
