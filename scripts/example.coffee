@@ -103,7 +103,7 @@ module.exports = (robot) ->
      msg.send msg.random leaveReplies
 
 
-  robot.respond /CATFACT$/i, (msg) ->
+  robot.hear /CATFACT$/i, (msg) ->
     msg.http('http://catfacts-api.appspot.com/api/facts?number=1')
             .get() (error, response, body) ->
                 # passes back the complete reponse
