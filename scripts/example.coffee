@@ -56,6 +56,9 @@ module.exports = (robot) ->
   robot.respond  /Es ce que tu le savent/i, (msg)->
     msg.reply "Biensur que je le savent !" 
 
+  robot.hear /oui qui/i, (msg)->
+    msg.reply "Wikipédia"
+
 
   robot.hear /ping/, (msg) ->
     setTimeout () ->
