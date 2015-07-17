@@ -77,9 +77,10 @@ module.exports = (robot) ->
     else
       msg.reply "Opening #{doorType} doors"
  
-  robot.respond /Witness (.*) /i, (msg) ->
+  robot.respond /Witness (.*)/i, (msg) ->
     witnessMan = msg.match[1]
-    msg.reply " WITNESSSSSS @#{witnessMan}"
+    msg.reply " WITNESSSSSS #{witnessMan} !"
+
   # robot.hear /I like pie/i, (msg) ->
   #   msg.emote "makes a freshly baked pie"
   #
