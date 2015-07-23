@@ -59,6 +59,8 @@ module.exports = (robot) ->
   robot.hear /oui qui/i, (msg)->
     msg.reply "Wikipédia"
 
+  robot.hear /mignon/, (msg)->
+    msg.reply "ᶘ ᵒᴥᵒᶅ"
 
   robot.hear /ping/, (msg) ->
     setTimeout () ->
