@@ -62,11 +62,11 @@ module.exports = (robot) ->
   robot.hear /coucou/, (msg)->
     msg.send "ᶘ ᵒᴥᵒᶅ"
 
-  robot.hear /ping/, (msg) ->
+  robot.hear /\bping\b/i, (msg) ->
     setTimeout () ->
       msg.send "pong"
     , 60 * 1000
-  robot.hear /pong/, (msg) ->
+  robot.hear /\bpong\b/i, (msg) ->
     setTimeout () ->
       msg.send "ping"
     , 60 * 1000
