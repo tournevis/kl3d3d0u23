@@ -14,7 +14,7 @@ module.exports = (robot) ->
   #   msg.send "Badgers? BADGERS? WE DON'T NEED NO STINKIN BADGERS"
   #
   tg = ['Stfu Stupid Human !', 'Dumb Ass', 'Go fuck yourself in your fat fucking ass']
-  robot.hear /pd/i, (msg)->
+  robot.hear /\bpd\b/i, (msg)->
     msg.reply msg.random tg 
 
   robot.hear /How dare you/i, (msg)->
@@ -27,7 +27,7 @@ module.exports = (robot) ->
   robot.respond /i love you/i, (msg)->
     msg.reply "Love you too, dude. <3"
 
-  robot.hear /admin/i, (msg)->
+  robot.hear /\badmin\b/i, (msg)->
     msg.send "@madjid fasciste de merde" 
 
   robot.hear /merci jojo$/i, (msg)->
