@@ -30,6 +30,9 @@ module.exports = (robot) ->
   robot.hear /\badmin\b/i, (msg)->
     msg.send "@madjid fasciste de merde" 
 
+  robot.hear /arthur/i, (msg)->
+    msg.send "Oui ?" 
+
   robot.hear /merci jojo$/i, (msg)->
     msg.send "Merci jojo" 
 
