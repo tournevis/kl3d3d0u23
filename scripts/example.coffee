@@ -135,7 +135,7 @@ module.exports = (robot) ->
     
     (message) -> # Match function
       # Occassionally respond to things that Steve says
-      Math.floor(Math.random() * 100) > 98.5
+      Math.floor(Math.random() * 1000) > 999
     (response) -> # Standard listener callback
       # Let Steve know how happy you are that he exists
       response.reply "HEY ! YOU'RE MY BEST FRIEND! (but only like #{Math.floor(Math.random() * 100)}% of the time)"
