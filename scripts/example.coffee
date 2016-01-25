@@ -62,17 +62,20 @@ module.exports = (robot) ->
   robot.hear /oui qui/i, (msg)->
     msg.reply "Wikipédia"
 
+  robot.hear /mer/i, (msg)->
+    msg.reply "Mer il é Fou"
+
   robot.hear /coucou/, (msg)->
     msg.send "ᶘ ᵒᴥᵒᶅ"
 
   robot.hear /\bping\b/i, (msg) ->
     setTimeout () ->
       msg.send "pong"
-    , 60 * 1000
+    , 10 * 1000
   robot.hear /\bpong\b/i, (msg) ->
     setTimeout () ->
       msg.send "ping"
-    , 60 * 1000
+    , 10 * 1000
 
 
   robot.respond /open the (.*) doors/i, (msg) ->
@@ -128,6 +131,15 @@ module.exports = (robot) ->
   robot.hear /trigger/i, (msg) ->
     imageMe 'animate trigger', 'trigger', true, (url) ->
       msg.send url
+
+  robot.listen(
+    (message) -> # Match function
+      # Occassionally respond to things that Steve says
+      message.user.name is "k13d3d0u23" and Math.random() > 0.9
+    (response) -> # Standard listener callback
+      # Let Steve know how happy you are that he exists
+      response.reply "HI @k13d3d0u23 ! YOU'RE MY BEST FRIEND! (but only like #{response.match * 100}% of the time)"
+  )
   #
   # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
   #
