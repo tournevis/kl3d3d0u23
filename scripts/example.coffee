@@ -62,8 +62,8 @@ module.exports = (robot) ->
   robot.hear /oui qui/i, (msg)->
     msg.reply "Wikipédia"
 
-  robot.hear / mer /i, (msg)->
-    msg.reply "Mer il é Fou"
+  robot.hear / mer /, (msg)->
+    msg.send "Mer il é Fou"
 
   robot.hear /coucou/, (msg)->
     msg.send "ᶘ ᵒᴥᵒᶅ"
