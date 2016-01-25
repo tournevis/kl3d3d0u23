@@ -135,10 +135,10 @@ module.exports = (robot) ->
   robot.listen(
     (message) -> # Match function
       # Occassionally respond to things that Steve says
-      message.user.name is "k13d3d0u23" and Math.random()*(100) > 95
+      message.user.name is "k13d3d0u23" and Math.floor(Math.random() * 100) > 8
     (response) -> # Standard listener callback
       # Let Steve know how happy you are that he exists
-      response.reply "HI Cle De Douze! YOU'RE MY BEST FRIEND! (but only like #{response.match}% of the time)"
+      response.reply "HI Cle De Douze! YOU'RE MY BEST FRIEND! (but only like #{ response.match }% of the time)"
   )
   #
   # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
