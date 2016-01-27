@@ -15,7 +15,7 @@ module.exports = (robot) ->
   #
   tg = ['Stfu Stupid Human !', 'Dumb Ass', 'Go fuck yourself in your fat fucking ass']
   robot.hear /\bpd\b/i, (msg)->
-    msg.reply msg.random tg 
+    msg.reply msg.random tg
 
   robot.hear /How dare you/i, (msg)->
     sender = msg.message.user.name.toLowerCase()
@@ -28,16 +28,16 @@ module.exports = (robot) ->
     msg.reply "Love you too, dude. <3"
 
   robot.hear /\badmin\b/i, (msg)->
-    msg.send "@madjid fasciste de merde" 
+    msg.send "@madjid fasciste de merde"
 
   robot.hear /arthur/i, (msg)->
-    msg.send "Oui ?" 
+    msg.send "Oui ?"
 
   robot.hear /merci jojo$/i, (msg)->
-    msg.send "Merci jojo" 
+    msg.send "Merci jojo"
 
   robot.hear /mort/i, (msg)->
-    msg.send "I\'m back from the dead MORTHERFUCKERS" 
+    msg.send "I\'m back from the dead MORTHERFUCKERS"
 
   feuille = ['feuye de brik', 'Feuille de Brick', 'Feuille de Brique']
   robot.hear /feuille/i, (msg)->
@@ -55,9 +55,9 @@ module.exports = (robot) ->
     msg.send msg.random pidi
 
   robot.hear /coucou madjid/i, (msg)->
-    msg.send "@madjid coucou" 
+    msg.send "@madjid coucou"
   robot.respond  /Es ce que tu le savent/i, (msg)->
-    msg.reply "Biensur que je le savent !" 
+    msg.reply "Biensur que je le savent !"
 
   robot.hear /oui qui/i, (msg)->
     msg.reply "Wikipédia"
@@ -84,7 +84,7 @@ module.exports = (robot) ->
       msg.reply "I'm afraid I can't let you do that."
     else
       msg.reply "Opening #{doorType} doors"
- 
+
   robot.respond /Witness (.*)/i, (msg) ->
     witnessMan = msg.match[1]
     msg.send " WITNESSSSSS #{witnessMan} !"
@@ -131,8 +131,8 @@ module.exports = (robot) ->
   robot.hear /trigger/i, (msg) ->
     imageMe 'animate trigger', 'trigger', true, (url) ->
       msg.send url
+
   robot.listen(
-    
     (message) -> # Match function
       # Occassionally respond to things that Steve says
       Math.floor(Math.random() * 1000) > 999
