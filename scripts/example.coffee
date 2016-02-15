@@ -62,7 +62,7 @@ module.exports = (robot) ->
   robot.hear /oui qui/i, (msg)->
     msg.reply "Wikipédia"
 
-  robot.hear / mer /, (msg)->
+  robot.hear /" mer "/, (msg)->
     msg.send "Mer il é Fou"
 
   robot.hear /coucou/, (msg)->
@@ -132,18 +132,11 @@ module.exports = (robot) ->
     imageMe 'animate trigger', 'trigger', true, (url) ->
       msg.send url
 
-  robot.listen(
-    (message) -> # Match function
-      # Occassionally respond to things that Steve says
-      Math.floor(Math.random() * 1000) > 999
-    (response) -> # Standard listener callback
-      # Let Steve know how happy you are that he exists
-      response.reply "HEY ! YOU'RE MY BEST FRIEND! (but only like #{Math.floor(Math.random() * 100)}% of the time)"
-  )
+
   #
   # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
   #
-  # robot.respond /what is the answer to the ultimate question of life/, (msg) ->
+  # robot.respond /what is therhe answer to the ultimate question of life/, (msg) ->
   #   unless answer?
   #     msg.send "Missing HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING in environment: please set and try again"
   #     return
