@@ -132,7 +132,15 @@ module.exports = (robot) ->
     imageMe 'animate trigger', 'trigger', true, (url) ->
       msg.send url
 
-
+  
+  robot.listen(
+    (message) -> # Match function
+      # Occassionally respond to things that Steve says
+      Math.floor(Math.random() * 1000) > 999
+    (response) -> # Standard listener callback
+      # Let Steve know how happy you are that he exists
+      response.reply "HEY ! YOU'RE MY BEST FRIEND! (but only like #{Math.floor(Math.random() * 100)}% of the time)"
+  )
   #
   # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
   #
