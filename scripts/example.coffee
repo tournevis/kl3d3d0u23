@@ -33,6 +33,9 @@ module.exports = (robot) ->
   robot.hear /arthur/i, (msg)->
     msg.send "Oui ?"
 
+  robot.hear /biere/i, (msg) ->
+    msg.send "Le temps est bon, le ciel est bleu,j'ai très envie d'aller boire une bière, une bière ou deux"
+
   robot.hear /merci jojo$/i, (msg)->
     msg.send "Merci jojo"
 
