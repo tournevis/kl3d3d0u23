@@ -148,14 +148,6 @@ module.exports = (robot) ->
   robot.hear/vieille/i, (msg)->
     msg.send "Il trouve la tombe à mémé, Il déterre la vieille, les vers l\'ont désossé, donc il régurgite, sur les fleurs déposées"
 
-  robot.listen(
-    (message) -> # Match function
-      # Occassionally respond to things that Steve says
-    if Math.floor(Math.random() * 1000) > 998.5
-    (response) -> # Standard listener callback
-      # Let Steve know how happy you are that he exists
-      response.reply "HEY ! YOU'RE MY BEST FRIEND! (but only like #{Math.floor(Math.random() * 100)}% of the time)"
-  )
   #
   # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
   #
