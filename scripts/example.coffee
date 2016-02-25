@@ -97,7 +97,7 @@ module.exports = (robot) ->
   #
   lulz = ['lol', 'rofl', 'lmao']
   #
-  robot.respond /lol/i, (msg) ->
+  robot.hear/lol/i, (msg) ->
     msg.send msg.random lulz
   robot.hear /boloss/i, (msg) ->
     msg.send "Grave, boloss"
@@ -131,15 +131,27 @@ module.exports = (robot) ->
                 else
                   msg.send "Unable to get cat facts right now."
 
+
   robot.hear /trigger/i, (msg) ->
     imageMe 'animate trigger', 'trigger', true, (url) ->
       msg.send url
 
-  
+  robot.hear/amis/i,(msg)->
+    msg.reply "Viens pas t\'étonner si on t\'aime, pas si on peut troquer ta vie contre un potatoes ou un tempura"
+
+  robot.hear/venger/i,(msg)->
+    msg.reply "Parce que l\'mec s\'est vengé Il a dit : \"Tous tes morts Fils de pute, j\'vais les manger !\" "
+
+  robot.hear/cimetiere/i,(msg)->
+    msg.send "Cimetière communal, Il tchek toutes les pierres tombales, Il lâche deux/trois croix gammées"
+
+  robot.hear/vieille/i, (msg)->
+    msg.send "Il trouve la tombe à mémé, Il déterre la vieille, les vers l\'ont désossé, donc il régurgite, sur les fleurs déposées"
+
   robot.listen(
     (message) -> # Match function
       # Occassionally respond to things that Steve says
-      Math.floor(Math.random() * 1000) > 999
+    if Math.floor(Math.random() * 1000) > 998.5
     (response) -> # Standard listener callback
       # Let Steve know how happy you are that he exists
       response.reply "HEY ! YOU'RE MY BEST FRIEND! (but only like #{Math.floor(Math.random() * 100)}% of the time)"
