@@ -92,13 +92,14 @@ module.exports = (robot) ->
     witnessMan = msg.match[1]
     msg.send " WITNESSSSSS #{witnessMan} !"
 
-  # robot.hear /I like pie/i, (msg) ->
-  #   msg.emote "makes a freshly baked pie"
+  robot.hear /I like pie/i, (msg) ->
+    msg.emote "makes a freshly baked pie"
   #
+
   lulz = ['lol', 'rofl', 'lmao']
-  #
-  robot.hear/lol/i, (msg) ->
+  robot.hear /lol/i, (msg) ->
     msg.send msg.random lulz
+
   robot.hear /boloss/i, (msg) ->
     msg.send "Grave, boloss"
 
@@ -136,17 +137,17 @@ module.exports = (robot) ->
     imageMe 'animate trigger', 'trigger', true, (url) ->
       msg.send url
 
-  robot.hear /amis/i,(msg)->
-    msg.reply "Viens pas t\'étonner si on t\'aime, pas si on peut troquer ta vie contre un potatoes ou un tempura"
+  robot.hear /amis/i, (msg) ->
+    msg.reply " Viens pas t\'étonner si on t\'aime, pas si on peut troquer ta vie contre un potatoes ou un tempura "
 
-  robot.hear /venger/i, (msg)->
-    msg.reply "Parce que l\'mec s\'est vengé Il a dit : \"Tous tes morts Fils de pute, j\'vais les manger !\" "
+  robot.hear /venger/i, (msg) ->
+    msg.send " Parce que l\'mec s\'est vengé Il a dit : \"Tous tes morts Fils de pute, j\'vais les manger !\" "
 
-  robot.hear /cimetiere/i, (msg)->
-    msg.send "Cimetière communal, Il tchek toutes les pierres tombales, Il lâche deux/trois croix gammées"
+  robot.hear /cimetiere/i, (msg) ->
+    msg.send " Cimetière communal, Il tchek toutes les pierres tombales, Il lâche deux\/trois croix gammées "
 
-  robot.hear /vieille/i, (msg)->
-    msg.send "Il trouve la tombe à mémé, Il déterre la vieille, les vers l\'ont désossé, donc il régurgite, sur les fleurs déposées"
+  robot.hear /vieille/i, (msg) ->
+    msg.send " Il trouve la tombe à mémé, Il déterre la vieille, les vers l\'ont désossé, donc il régurgite, sur les fleurs déposées"
 
   #
   # answer = process.env.HUBOT_ANSWER_TO_THE_ULTIMATE_QUESTION_OF_LIFE_THE_UNIVERSE_AND_EVERYTHING
