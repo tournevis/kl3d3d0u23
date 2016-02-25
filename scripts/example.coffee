@@ -136,16 +136,16 @@ module.exports = (robot) ->
     imageMe 'animate trigger', 'trigger', true, (url) ->
       msg.send url
 
-  robot.hear/amis/i,(msg)->
+  robot.hear /amis/i,(msg)->
     msg.reply "Viens pas t\'étonner si on t\'aime, pas si on peut troquer ta vie contre un potatoes ou un tempura"
 
-  robot.hear/venger/i,(msg)->
+  robot.hear /venger/i, (msg)->
     msg.reply "Parce que l\'mec s\'est vengé Il a dit : \"Tous tes morts Fils de pute, j\'vais les manger !\" "
 
-  robot.hear/cimetiere/i,(msg)->
+  robot.hear /cimetiere/i, (msg)->
     msg.send "Cimetière communal, Il tchek toutes les pierres tombales, Il lâche deux/trois croix gammées"
 
-  robot.hear/vieille/i, (msg)->
+  robot.hear /vieille/i, (msg)->
     msg.send "Il trouve la tombe à mémé, Il déterre la vieille, les vers l\'ont désossé, donc il régurgite, sur les fleurs déposées"
 
   #
