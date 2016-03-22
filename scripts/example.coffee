@@ -39,9 +39,6 @@ module.exports = (robot) ->
   robot.hear /merci jojo$/i, (msg)->
     msg.send "Merci jojo"
 
-  robot.hear /mort/i, (msg)->
-    msg.send "I\'m back from the dead MORTHERFUCKERS"
-
   feuille = ['feuye de brik', 'Feuille de Brick', 'Feuille de Brique']
   robot.hear /feuille/i, (msg)->
     msg.send msg.random feuille
